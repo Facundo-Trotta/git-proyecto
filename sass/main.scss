@@ -1,0 +1,206 @@
+
+@import "utilidades/variables";
+@import "utilidades/mixin";
+
+* {
+    @include margin-padding (0, 0);   
+}
+
+ /*inicio*/
+
+.inicio { 
+    div{
+        .inicio-titulo {
+            text-align: $text-align;
+            font-size: 25px; 
+        }
+        .inicio-fondo {
+            @include width (100%)
+        }
+    }
+    .catalogo{
+        @include margin(0 30px); 
+        @include grid-dos;
+        gap: $gap-size;
+        align-content: center;
+        img {
+            @include medidas (100%, 75%);
+            @include flex;
+        } 
+        .catalogo-dos {
+            text-align: $text-align; 
+        }
+    } 
+}
+
+/*productos*/
+.productos {
+    @include margin(0 15px); 
+    font-size: 20px;
+    text-align: $text-align;
+    img {
+        @include margin-height (100%, 80%);
+    }
+    .orden-productos {
+        .producto-uno {
+            background-color: $color-segundario;
+            color: $color-principal;
+            @include margin (10px 10px);  
+        }
+    }
+}
+
+/*servicios*/
+
+.servicios {
+    @include margin(0 30px); 
+    img {
+        @include medidas (50%, 50%);
+    }
+}
+
+ /*contacto*/
+ .horario4 {
+    background-color: $color-segundario;
+
+    .horario {
+    text-transform: uppercase;
+    color: $color-principal;
+    text-align: $text-align;
+    }
+    div {
+        .horario2 p {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+
+/*local*/
+
+.contenedor-map {
+    background-color: $color-segundario;
+    @include flex;
+    div {
+        .map2 {
+            @include margin(0 30px); 
+            color: $color-principal;
+            text-align: $text-align;
+        }
+    }
+}
+
+/*footer*/
+
+.footer {
+    @include width (100%);
+    background-color: $color-segundario;
+    padding: 40px 0;
+    .container-footer {
+        .footer-row {
+            @include flex;
+
+            .footer-links {
+                width: 25%;
+                padding: 0 15%;
+                    h2 {
+                        font-size: 20px;
+                        color: $color-principal;
+                        margin-bottom: 25px;
+                        font-weight: 500;
+                        border-bottom: 2px solid $color-cuarto;
+                        padding-bottom: 10px;
+                        display: inline-block;
+                    }
+                    ul li {
+                        font-size: 18px;
+                        text-decoration: none;
+                        color: $color-terciario;
+                        @include block;
+                    }
+                    ul li:hover {
+                        color: $color-principal;
+                        padding-left: 6px;
+                    }
+            }
+            .social-links {
+                font-size: 18px;
+                text-decoration: none;
+                color: $color-terciario;
+                @include block;
+                a {
+                    min-height: 400px;
+                    @include width (40px);
+                    margin: 0 10px 10px 0;
+                    text-align: $text-align;
+                    line-height: 40px;
+                    color: $color-principal;
+                    transition: all .5s ease;
+                }
+            }
+            .social-links:hover {
+                color: $color-principal;
+                padding-left: 6px;
+            }
+        }
+    }
+}
+
+/*mobile*/
+@media screen and (max-width: 767px) {
+    .servicios .servicios-dos {
+        @include flex;
+        text-align: $text-align;
+        font-size: 20px;
+        align-content: center;
+        gap: $gap-size;
+    }
+    .inicio {
+        @include margin (auto);
+    }
+    .productos {
+        @include margin (0 40px);
+    }
+}
+
+/*tablet*/
+@media screen and (min-width: 768px) and (max-width: 998px) {
+    .servicios .servicios-dos {
+        @include flex;
+        text-align: $text-align;
+        font-size: 30px;
+        align-content: center;
+        gap: $gap-size;
+    }
+    .productos .orden-productos {
+        font-size: 15px;
+        @include grid;
+        img {
+            @include medidas (100%, 200px);
+        }
+    }
+}
+
+/*escritorio*/
+@media screen and (min-width: 999px) {
+    .servicios {
+        .servicios-dos {
+            @include flex;
+            text-align: $text-align;
+            font-size: 40px;
+            align-content: center;
+            gap: $gap-size;
+        }
+    }
+ 
+    .productos {
+        .orden-productos {
+            font-size: 20px;
+            gap: $gap-size;
+            img {
+                @include medidas (100%, 300px);
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+@mixin medidas ($width, $heigh) {
+    width: $width;
+    height: $heigh;
+}
+@mixin width ($width) {
+    width: $width;
+}
+
+@mixin margin ($margin) {
+    margin: $margin;
+}
+@mixin height ($height) {
+    height: $height;
+}
+@mixin margin-height ($margin, $height) {
+    margin: $margin;
+    height: $height;
+}
+@mixin margin-padding ($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin inline-block {
+    display: inline-block;
+}
+
+@mixin grid {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(2, 25%);
+}
+
+@mixin grid-dos {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: 1fr;
+
+}
+@mixin block {
+    display: block;
+    margin-bottom: 15px;
+     transition: all .3s ease;
+}
+
