@@ -33,7 +33,7 @@
 @mixin grid {
     display: grid;
     grid-template-columns: repeat(4, 25%);
-    grid-template-rows: repeat(2, 25%);
+    grid-template-rows: repeat(2, 50%);
 }
 
 @mixin grid-dos {

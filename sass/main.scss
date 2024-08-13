@@ -36,10 +36,10 @@
 /*productos*/
 .productos {
     @include margin(0 15px); 
-    font-size: 20px;
+    font-size: $font-size;
     text-align: $text-align;
     img {
-        @include margin-height (100%, 80%);
+        @include medidas (100%, 80%);
     }
     .orden-productos {
         .producto-uno {
@@ -114,7 +114,7 @@
                         display: inline-block;
                     }
                     ul li {
-                        font-size: 18px;
+                        font-size: $font-size;
                         text-decoration: none;
                         color: $color-terciario;
                         @include block;
@@ -125,7 +125,7 @@
                     }
             }
             .social-links {
-                font-size: 18px;
+                font-size: $font-size;
                 text-decoration: none;
                 color: $color-terciario;
                 @include block;
@@ -152,7 +152,7 @@
     .servicios .servicios-dos {
         @include flex;
         text-align: $text-align;
-        font-size: 20px;
+        font-size: $font-size;
         align-content: center;
         gap: $gap-size;
     }
@@ -196,8 +196,8 @@
  
     .productos {
         .orden-productos {
-            font-size: 20px;
-            gap: $gap-size;
+            font-size: $font-size;
+            @include grid;
             img {
                 @include medidas (100%, 300px);
             }
